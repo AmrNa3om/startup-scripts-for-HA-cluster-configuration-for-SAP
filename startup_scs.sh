@@ -882,8 +882,8 @@ EOM
 ha::check_settings() {
 
   # Set additional global constants
-  readonly PRIMARY_NODE_IP=$(gcloud compute instances list --format="csv[no-heading](INTERNAL_IP)"  --filter="name=(aigascs-ers1)" --project=aig-sap-dev)
-  readonly SECONDARY_NODE_IP=$(gcloud compute instances list --format="csv[no-heading](INTERNAL_IP)"  --filter="name=(aigascs-ers2)" --project=aig-sap-dev)
+  readonly PRIMARY_NODE_IP=$(gcloud compute instances list --format="csv[no-heading](INTERNAL_IP)"  --filter="name=(aigascs-ers1)" --project=ms-test-environment)
+  readonly SECONDARY_NODE_IP=$(gcloud compute instances list --format="csv[no-heading](INTERNAL_IP)"  --filter="name=(aigascs-ers2)" --project=ms-test-environment)
   echo "${PRIMARY_NODE_IP} aigascs-ers1" >> /etc/hosts
   echo "${SECONDARY_NODE_IP} aigascs-ers2" >> /etc/hosts
 
